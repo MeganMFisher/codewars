@@ -54,7 +54,13 @@ function invert(array) {
 
 // QUESTION find average of number in array
 
-
+function find_average(array) {
+  let sum = 0;
+  for(var i = 0; i < array.length; i++) {
+    sum += parseInt(array[i])
+  }
+  return sum / array.length;
+}
 
 // other solutions
 
