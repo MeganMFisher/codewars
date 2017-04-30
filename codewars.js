@@ -235,4 +235,18 @@ return 'The year flew by!';
 }
 }
 
+// QUESTION most digits
+
+function findLongest(array){
+ var nums = 0
+  for(var i = 0; i < array.length; i++){
+     if(array[i].toString().length > nums.toString().length){
+       nums = array[i]
+     }
+  }
+  return nums
+}
+
+// other answers
+
 
