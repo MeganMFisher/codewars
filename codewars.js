@@ -249,4 +249,45 @@ function findLongest(array){
 
 // other answers
 
+function findLongest(a) {
+  let m = Math.max(...a);
+  for (let i = 0; i < a.length; i++) if (m.toString().length == a[i].toString().length ) return a[i];
+}
+
+function findLongest(array){
+  return array.reduce((res, curr) => (String(res).length < String(curr).length) ? curr : res);
+}
+
+function findLongest(a) {
+  return a[a.map(n => ~~Math.log10(n)).indexOf(Math.max(...a.map(n => ~~Math.log10(n))))];
+}
+
+// QUESTION vowel count
+
+function getCount(str) {
+  var vowelsCount = 0;
+  var string = str.split('')
+  for(var i = 0; i < string.length; i++){
+   if('aeiou'.indexOf(string[i]) != -1) {
+      vowelsCount++
+    }
+  }
+  return vowelsCount;
+}
+
+// other answers
+
+function getCount(str) {
+  return (str.match(/[aeiou]/ig)||[]).length;
+}
+
+function getCount(str) {
+  var vowelsCount = 0;
+  vowelsCount = str.match(/[aeiou]/gi);
+  return vowelsCount ? vowelsCount.length:0;
+}
+
+const getCount = str => str.replace(/[^aeiou]/g, '').length;
+
+// QUESTION
 
