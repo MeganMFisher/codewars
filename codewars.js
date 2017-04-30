@@ -289,5 +289,34 @@ function getCount(str) {
 
 const getCount = str => str.replace(/[^aeiou]/g, '').length;
 
+// QUESTION mumbling
+
+function accum(s) {
+	let letters = s.toLowerCase().split('')
+  for(let i = 0; i < letters.length; i++) {
+    letters[i] = letters[i].toUpperCase() + letters[i].repeat(i)
+  }
+  return letters.join('-')
+}
+
+// other answers
+
+function accum(s) {
+  return s.split('').map((c, i) => (c.toUpperCase() + c.toLowerCase().repeat(i))).join('-');
+}
+
+function accum(s) {
+  return s.split('').map((x,index) => x.toUpperCase()+Array(index+1).join(x.toLowerCase())).join('-');
+}
+
+function accum(str) {
+  var letters = str.split('');
+  var result = [];
+  for (var i = 0; i < letters.length; i++) {
+    result.push(letters[i].toUpperCase() + Array(i + 1).join(letters[i].toLowerCase()));
+  }
+  return result.join('-');
+}
+
 // QUESTION
 
