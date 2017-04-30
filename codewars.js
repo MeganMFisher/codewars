@@ -158,4 +158,81 @@ const rps = (p1, p2) => {
      return 'Player 2 won!';
 };
 
-// QUESTION 
+// QUESTION Last
+
+function last(list){ 
+console.log(list)
+if(list.length > 2) {
+  var arr = list.slice(-1);
+  return arr[arr.length-1];
+  } else {
+  var arg = Array.prototype.slice.call(arguments);
+   return arg[arg.length-1]
+   } 
+}
+
+// other solutions
+
+function last(list){
+  var last = arguments[arguments.length - 1];
+  return last[last.length - 1] || last;
+}
+
+function last(list) {
+  if (arguments.length > 1) {
+    return arguments[arguments.length - 1];
+  }
+  if (Array.isArray(list)) {
+    return list.pop();
+  } else if (typeof list == 'string') {
+    return list.charAt(list.length - 1)
+  } else {
+    return list;
+  }
+}
+
+function last(list){
+  return arguments.length > 1 
+    || !(list instanceof String || typeof(list) == 'string' || list instanceof Array) 
+      ? arguments[arguments.length - 1] 
+      : list[list.length - 1];
+}
+
+// QUESTION the four seasons
+
+function fourSeasons(d){
+  if(d >= 81 && d <= 172){
+    return 'Spring Season'
+  }else if(d >= 173 && d <= 264){
+    return 'Summer Season'
+  }else if(d >= 265 && d <= 355){
+    return 'Autumn Season'
+  }else if(d >= 355 && d <= 365 || d <= 81){
+    return 'Winter Season'
+  } else {
+    return 'The year flew by!'
+  }
+}
+
+// other answers
+
+function fourSeasons(d){
+switch (true) {
+case (d <= 79 || d >= 355 && d <= 365) :
+return 'Winter Season';
+break;
+case (d >= 80 && d <= 171) :
+return 'Spring Season';
+break;
+case (d >= 172 && d <= 263) :
+return 'Summer Season';
+break;
+case (d >= 264 && d <= 354) :
+return 'Autumn Season';
+break;
+default:
+return 'The year flew by!';
+}
+}
+
+
