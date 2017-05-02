@@ -57,5 +57,29 @@ String.prototype.toJadenCase = function () {
   return this.split(' ').map(capitalizeFirstLetter).join(' ');
 };
 
-// QUESTION
+// QUESTION Get the Middle Character
+
+function getMiddle(s) {
+  return s.length % 2 ? s.substr(s.length / 2, 1) : s.substr((s.length / 2) - 1, 2);
+}
+
+// other answers
+
+function getMiddle(s)
+{
+  return s.substr(Math.ceil(s.length / 2 - 1), s.length % 2 === 0 ? 2 : 1);
+}
+
+function getMiddle(s) {
+  var middle = s.length / 2;
+  return (s.length % 2) 
+    ? s.charAt(Math.floor(middle))
+    : s.slice(middle - 1, middle + 1);
+}
+
+const getMiddle = s => s.substr(s.length - 1 >>> 1, (~s.length & 1) + 1);
+
+// QUESTION 
+
+
 
