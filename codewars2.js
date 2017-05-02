@@ -163,7 +163,28 @@ function array_diff(a, b) {
   return a.filter(function (v) { return b.indexOf(v) === -1 });
 }
 
-// QUESTION 
+// QUESTION Dubstep
+
+function songDecoder(song){
+  var a = song.replace(/WUB/g,' ');
+  var b = a.replace(/\s+/g, ' ')
+  return b.trim()
+}
+
+// other answers 
+
+function songDecoder(song){
+  return song.replace(/(WUB)+/g," ").trim()
+}
+
+function songDecoder(song){
+  return song.split('WUB').filter(Boolean).join(' ');
+}
+
+var songDecoder = (song) => song.split('WUB').filter(x => x !== '').join(' ')
+
+// QUESTION
+
 
 
 
