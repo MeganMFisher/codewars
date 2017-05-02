@@ -137,7 +137,33 @@ function squareDigits(num){
     return Number(results.join(''));
 };
 
-// QUESTION
+// QUESTION Array.diff
+
+function array_diff(a, b) {
+  var diff = []
+  for(var i = 0; i < a.length; i++) {
+  if(a[i] != b) {
+    diff.push(a[i])
+    }
+  }
+  return diff
+}
+
+// other answers
+
+function array_diff(a, b) {
+  return a.filter(function(x) { return b.indexOf(x) == -1; });
+}
+
+function array_diff(a, b) {
+  return a.filter(e => !b.includes(e));
+}
+
+function array_diff(a, b) {
+  return a.filter(function (v) { return b.indexOf(v) === -1 });
+}
+
+// QUESTION 
 
 
 
