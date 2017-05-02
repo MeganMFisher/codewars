@@ -183,7 +183,36 @@ function songDecoder(song){
 
 var songDecoder = (song) => song.split('WUB').filter(x => x !== '').join(' ')
 
+// QUESTION Duplicate Encoder
+
+function duplicateEncode(word){
+  return word.toLowerCase().split('').map( function (a, b, c) {
+      return c.indexOf(a) == c.lastIndexOf(a) ? '(' : ')'
+    }).join('');
+}
+
+// other answers
+
+function duplicateEncode(word){
+  return word
+    .toLowerCase()
+    .split('')
+    .map( function (a, i, w) {
+      return w.indexOf(a) == w.lastIndexOf(a) ? '(' : ')'
+    })
+    .join('');
+}
+
+function duplicateEncode(word) {
+  var letters = word.toLowerCase().split('')
+  return letters.map(function(c, i) {
+    return letters.some(function(x, j) { return x === c && i !== j }) ? ')' : '('
+  }).join('')
+}
+
 // QUESTION
+
+
 
 
 
