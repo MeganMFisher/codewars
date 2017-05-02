@@ -79,7 +79,29 @@ function getMiddle(s) {
 
 const getMiddle = s => s.substr(s.length - 1 >>> 1, (~s.length & 1) + 1);
 
-// QUESTION 
+// QUESTION Descending Order
+
+function descendingOrder(n){
+  let a = n.toString().split('')
+  let b = a.sort(function(a, b){return b-a}).join('')
+  return (b / 1)
+}
+
+// other answers
+
+function descendingOrder(n){
+  return parseInt(String(n).split('').sort().reverse().join(''))
+}
+
+function descendingOrder(n){
+  return +(n + '').split('').sort(function(a,b){ return b - a }).join('');
+}
+
+function descendingOrder(n){
+  return parseInt(n.toString().split('').sort().reverse().join(''), 10);
+}
+
+// QUESTION
 
 
 
