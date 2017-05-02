@@ -30,4 +30,32 @@ var isSquare = function(n){
   return Number.isInteger(Math.sqrt(n));
 }
 
+// QUESTION Jaden Casing Strings
+
+String.prototype.toJadenCase = function () {
+ return this.replace(/(^|\s)[a-z]/g,function(f){return f.toUpperCase();})
+};
+
+// other answers 
+
+String.prototype.toJadenCase = function () { 
+  return this.split(" ").map(function(word){
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  }).join(" ");
+}
+
+String.prototype.toJadenCase = function () {
+  return this.replace(/(^|\s)[a-z]/g, function(x){ return x.toUpperCase(); });
+};
+
+String.prototype.toJadenCase = function () {
+
+  function capitalizeFirstLetter(string) {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+  
+  return this.split(' ').map(capitalizeFirstLetter).join(' ');
+};
+
 // QUESTION
+
