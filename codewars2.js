@@ -101,7 +101,45 @@ function descendingOrder(n){
   return parseInt(n.toString().split('').sort().reverse().join(''), 10);
 }
 
+// QUESTION Square Every Digit
+
+function squareDigits(num){
+  let a = num.toString()
+  let b = []
+  
+  for(var i = 0; i < a.length; i++) {
+    b[i] = a[i] * a[i]
+  }
+  return Number(b.join(''))
+}
+
+// other answers
+
+function squareDigits(num){
+  return Number(('' + num).split('').map(function (val) { return val * val;}).join('')); 
+}
+
+function squareDigits(num){
+  var array = num.toString().split('').map( function(int) {
+    var i = parseInt(int);
+    return i * i;
+  });
+  
+  return parseInt(array.join(""));
+}
+
+function squareDigits(num){
+    var string = num.toString();
+    var results = [];
+    for (var i = 0; i < string.length; i++){
+        results[i] = string[i] * string[i];
+    }
+    return Number(results.join(''));
+};
+
 // QUESTION
+
+
 
 
 
