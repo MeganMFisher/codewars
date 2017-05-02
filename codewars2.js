@@ -236,7 +236,34 @@ function pigIt(str){
   return words.join(" ");
 }
 
-// QUESTION 
+// QUESTION convert string to camel case
+
+toCamelCase = (str) => {
+  camel = str.split('');
+  return camel.map(function(e, i){
+    if(e == '-' || e == '_'){
+      e = camel[i+1].toUpperCase();
+      camel.splice(i+1, 1);
+    }
+    return e;
+  }).join('');
+}
+
+
+// other answers
+
+function toCamelCase(str){
+      var regExp=/[-_]\w/ig;
+      return str.replace(regExp,function(match){
+            return match.charAt(1).toUpperCase();
+       });
+}
+
+function toCamelCase(str){
+  return str.replace(/[-_](.)/g, (_, c) => c.toUpperCase());
+}
+
+
 
 
 
