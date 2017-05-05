@@ -18,6 +18,19 @@ var isSquare = function(n){
   return n >= 0 && Math.sqrt(n) % 1 === 0;
 }
 
+function disemvowel(str) {
+  var result = '';
+  
+  for(var i = 0; i < str.length; i++) {
+    var test = str.charAt(i).toLowerCase();
+    if (test !== 'a' && test !== 'e' && test !== 'i' && test !== 'o' && test !== 'u') {
+      result = result + str.charAt(i);
+    }
+  }
+  
+  return result;
+}
+
 // other answers
 
 function isSquare(n) {
@@ -352,6 +365,39 @@ function order(words){
   }
   return sortedArray.join(' ');
 }
+
+// QUESTION Replace with alphabet position
+
+function alphabetPosition(text) {
+  let alpha = 'abcdefghijklmnopqrstuvwxyz'
+  let split = text.toLowerCase().split('')
+  let final = []
+  for(let i = 0; i < split.length; i++) {
+    split[i] = alpha.indexOf(split[i]) + 1
+     if(split[i] !== 0) {
+       final.push(split[i])
+     }
+  }
+  return final.toString().replace(/,/g, " ");
+}
+
+// other answers
+
+function alphabetPosition(text) {
+  var result = "";
+  for (var i = 0; i < text.length; i++){
+    var code = text.toUpperCase().charCodeAt(i)
+    if (code > 64 && code < 91) result += (code - 64) + " ";
+  }
+
+  return result.slice(0, result.length-1);
+}
+
+function alphabetPosition(text) {
+  return text.match(/[a-zA-Z]/g).map( (el) => el.toLowerCase().charCodeAt() - 96 ).join(' ');
+}
+
+let alphabetPosition = (text) => text.toUpperCase().replace(/[^A-Z]/g, '').split('').map(ch => ch.charCodeAt(0) - 64).join(' ');
 
 // QUESTION
 
