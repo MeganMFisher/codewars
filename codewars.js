@@ -386,4 +386,33 @@ function areYouPlayingBanjo(name) {
   }
 }
 
+// QUESTION double Char
+
+doubleChar = (str) => {
+  var a = str.split('')
+  var b = []
+  console.log(a)
+  for(var i = 0; i < a.length; i++) {
+    b.push(a[i].repeat(2))
+    console.log(b)
+  }
+  return b.join('')
+}
+
+// other answers
+
+const doubleChar = (str) => str.split("").map(c => c + c).join("");
+
+function doubleChar(str) {
+  return str.replace(/(.)/g, "$1$1")
+}
+
+function doubleChar(str) {
+  var word = '';
+  for (var i = 0; i < str.length; i++){
+    word = word + str[i] + str[i];
+  };
+  return word;
+};
+
 // QUESTION 
