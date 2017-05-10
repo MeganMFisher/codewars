@@ -349,4 +349,14 @@ function fixTheMeerkat(arr) {
   return arr.reverse();
 }
 
-// QUESTION 
+// QUESTION convert number to a string
+
+function numberToString(num) {
+  return num.toString()
+}
+
+// other answer
+
+function numberToString(num) {
+  return String(num);
+}
