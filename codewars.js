@@ -339,4 +339,14 @@ function periodIsLate(last, today, cycleLength)
 
 periodIsLate = (last, today, cycleLength) => (last.getTime() + cycleLength * 86400000) < today
 
+// QUESTION my head is at the wrong end
+
+fixTheMeerkat = (arr) => arr.reverse()
+
+// other answers
+
+function fixTheMeerkat(arr) {
+  return arr.reverse();
+}
+
 // QUESTION 
