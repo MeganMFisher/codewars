@@ -360,3 +360,30 @@ function numberToString(num) {
 function numberToString(num) {
   return String(num);
 }
+
+// QUESTION are you playing banjo?
+
+areYouPlayingBanjo = (name) => {
+  if(name.toLowerCase().charAt(0) == 'r') {
+    name = name + ' plays banjo';
+  } else {
+    name = name + ' does not play banjo';
+  }
+  return name
+}
+
+// other answers
+
+function areYouPlayingBanjo(name) {
+  return name + (name[0].toLowerCase() == 'r' ? ' plays' : ' does not play') + " banjo";
+}
+
+function areYouPlayingBanjo(name) {
+  if (name[0].toLowerCase() === 'r') {
+    return name + ' plays banjo';
+  } else {
+    return name + ' does not play banjo';
+  }
+}
+
+// QUESTION 
