@@ -318,5 +318,25 @@ function accum(str) {
   return result.join('-');
 }
 
-// QUESTION
+// QUESTION is your period late?
 
+
+periodIsLate = (last, today, cycleLength) => {
+  let days =  Math.floor(( today - last ) / 86400000) 
+  if(days > cycleLength) {
+      return true
+  } else {
+      return false;
+  }
+}
+
+// other answers
+
+function periodIsLate(last, today, cycleLength)
+{
+  return (today-last)/86400000>cycleLength
+}
+
+periodIsLate = (last, today, cycleLength) => (last.getTime() + cycleLength * 86400000) < today
+
+// QUESTION 
