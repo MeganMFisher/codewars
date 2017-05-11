@@ -502,4 +502,30 @@ function countPositivesSumNegatives(input) {
   }, [0, 0]);
 }
 
+// QUESTION sum without highest and lowest number
+
+sumArray = (array) => {
+  if(array) {
+    var arr = 0
+    array.sort(function(a, b){return a - b}).pop()
+    array.shift()
+        for(var i  = 0; i < array.length; i++){
+            arr += array[i]
+        } 
+  } else {
+    arr = 0
+  }
+return arr
+}
+
+// other answers
+
+sumArray = a => a ? a.sort((x, y) => x - y).slice(1, -1).reduce((s, e) => s + e, 0) : 0
+
+function sumArray(array) {
+  return Array.isArray(array) && array.length > 1
+    ? array.reduce((s, n) => s + n, 0) - Math.min(...array) - Math.max(...array)
+    : 0
+}
+
 // QUESTION 
