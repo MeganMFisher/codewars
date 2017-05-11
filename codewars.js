@@ -469,4 +469,37 @@ function countBy(x, n){
   });
 }
 
-// QUESTION
+// QUESTION count of positives / sum of negatives
+
+ countPositivesSumNegatives = (input) => {
+ console.log(input)
+  if(input === null || input.length < 1) {
+    return []
+  }
+  var arr = [0, 0]
+    for(let i = 0; i < input.length; i++) {
+      if(input[i] > 0){
+        arr[0] += 1
+      } else {
+        arr[1] += input[i]
+      }
+    }
+      return arr
+}
+
+// other answers
+
+function countPositivesSumNegatives(input) {
+    return input && input.length ? [input.filter(p => p > 0).length, input.filter(n => n < 0).reduce((a, b) => a + b, 0)] : [];
+}
+
+function countPositivesSumNegatives(input) {
+  if (!Array.isArray(input) || !input.length) return [];
+  return input.reduce((arr, n) => {
+    if (n > 0) arr[0]++;
+    if (n < 0) arr[1] += n;
+    return arr;
+  }, [0, 0]);
+}
+
+// QUESTION 
