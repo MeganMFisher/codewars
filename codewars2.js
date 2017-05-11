@@ -399,9 +399,29 @@ function alphabetPosition(text) {
 
 let alphabetPosition = (text) => text.toUpperCase().replace(/[^A-Z]/g, '').split('').map(ch => ch.charCodeAt(0) - 64).join(' ');
 
-// QUESTION
+// QUESTION  no oddities here
 
+noOdds = ( values ) => {
+  let evens = []
+  values.map(function(e){
+    if(e % 2 === 0) {
+    evens.push(e)
+    }
+  })
+  return evens
+}
 
+// other answers
+
+function no_odds( values ){
+  return values.filter(function(item) {
+    return item % 2 == 0  
+  });
+}
+
+var noOdds = values => values.filter(x => x % 2 === 0);
+
+// QUESTION 
 
 
 
