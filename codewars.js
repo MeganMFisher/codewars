@@ -605,4 +605,14 @@ function getGrade (s1, s2, s3) {
   return s >= 90 ? "A" : s >= 80 ? "B" : s >= 70 ? "C" : s >= 60 ? "D" : "F"
 }
 
+// QUESTION Formatting decimal places #0
+
+twoDecimalPlaces = (n) => Math.round(n*100)/100;
+
+// other answers
+
+const twoDecimalPlaces = n =>  Number(n.toFixed(2))
+
+const twoDecimalPlaces = n => +n.toFixed(2)
+
 // QUESTION 
