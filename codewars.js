@@ -559,4 +559,18 @@ function monkeyCount(n) {
   return Array.from({length:n}, (_,i)=>i+1)
 }
 
+// QUESTION vowel remover
+
+shortcut = (string) => string.replace(/[aeiou]/gi, '')
+
+// other answers
+
+function shortcut(str) {
+  return str.split('').filter(function(e) {
+    return ['a', 'e', 'i', 'o', 'u'].indexOf(e) == -1 
+  }).join('')
+}
+
+const shortcut = string => string.replace( /[euioa]/g, '' );
+
 // QUESTION 
