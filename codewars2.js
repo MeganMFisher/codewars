@@ -421,8 +421,19 @@ function no_odds( values ){
 
 var noOdds = values => values.filter(x => x % 2 === 0);
 
-// QUESTION 
+// QUESTION Reversed strings
 
+solution = (str) => str.split('').reverse('').join('')
+
+// other answers
+
+let solution = str => [...str].reverse().join('');
+
+function solution(str){
+  return str.length > 0 ? solution(str.substring(1)) + str.charAt(0) : '';
+}
+
+// QUESTION 
 
 
 
