@@ -441,4 +441,32 @@ sum = function (numbers) {
     return numbers.reduce(function(prev, cur) { return prev + cur }, 0);
 };
 
+// QUESTION count by X
+
+countBy = (x, n) => {
+ var arr = [];
+  for(let i = 1; i < n+1; i++){
+      arr[i] = i * x
+  }
+   return arr.slice(1, arr.length);
+}
+
+// other answer
+
+function countBy(x, n) {
+    var z = [];
+    for (i = 1; i <= n; i++) {
+        z.push(x * i);
+    }
+    return z;
+}
+
+const countBy = (x, n) => Array.from({length: n}, (v, k) => (k + 1) * x)
+
+function countBy(x, n){
+  return Array.apply(0, Array(n)).map(function(v, i){
+    return (i + 1) * x;
+  });
+}
+
 // QUESTION
