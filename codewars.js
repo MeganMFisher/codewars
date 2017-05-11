@@ -415,4 +415,30 @@ function doubleChar(str) {
   return word;
 };
 
-// QUESTION 
+// QUESTION Sum Arrays
+
+sum = (numbers) => {
+   let sum = 0
+   for(let i = 0; i < numbers.length; i++) {
+    if(numbers.length > 0) {
+     sum += numbers[i]
+   } else {
+     sum = 0
+   }
+   }
+   console.log(sum)
+  return sum
+}
+
+// other answer 
+
+function sum(numbers) {
+  return numbers.reduce((a, b) => a + b, 0);
+}
+
+sum = function (numbers) {
+    "use strict";
+    return numbers.reduce(function(prev, cur) { return prev + cur }, 0);
+};
+
+// QUESTION
