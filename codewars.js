@@ -573,4 +573,36 @@ function shortcut(str) {
 
 const shortcut = string => string.replace( /[euioa]/g, '' );
 
+// QUESTION grasshopper grade book
+
+function getGrade (s1, s2, s3) {
+  var mean = (s1 + s2 + s3) / 3
+  if(mean >= 90) {
+    return 'A'
+  } else if(mean >= 80 && mean < 90) {
+    return 'B'
+  } else if(mean >= 70 && mean < 80) {
+    return 'C'
+  } else if(mean >= 60 && mean < 70) {
+    return 'D'
+  } else {
+    return 'F'
+  }
+}
+// other answers
+
+function getGrade (s1, s2, s3) {
+  avg = (s1+s2+s3)/3;
+  if (avg < 60)  return "F";
+    else if (avg < 70) return "D";
+    else if (avg < 80) return "C";
+    else if (avg < 90) return "B";
+    else return "A";
+}
+
+function getGrade (s1, s2, s3) {
+  var s = (s1 + s2 + s3) / 3
+  return s >= 90 ? "A" : s >= 80 ? "B" : s >= 70 ? "C" : s >= 60 ? "D" : "F"
+}
+
 // QUESTION 
