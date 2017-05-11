@@ -616,3 +616,24 @@ const twoDecimalPlaces = n =>  Number(n.toFixed(2))
 const twoDecimalPlaces = n => +n.toFixed(2)
 
 // QUESTION 
+
+fakeBin = (x) => {
+  var a = x.replace(/[0-4]/g, "0")
+  return a.replace(/[5-9]/g, "1")
+}
+
+// other answers
+
+function fakeBin(x) {
+    return x.split('').map(n => n < 5 ? 0 : 1).join('');
+}
+
+function fakeBin(x) {
+  return x.replace(/\d/g, d => d < 5 ? 0 : 1);
+}
+
+function fakeBin(x){
+  return x.replace(/[1234]/g, '0').replace(/[56789]/g, '1')
+}
+
+// QUESTION 
