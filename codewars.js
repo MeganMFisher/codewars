@@ -615,7 +615,7 @@ const twoDecimalPlaces = n =>  Number(n.toFixed(2))
 
 const twoDecimalPlaces = n => +n.toFixed(2)
 
-// QUESTION 
+// QUESTION Fake Binary
 
 fakeBin = (x) => {
   var a = x.replace(/[0-4]/g, "0")
@@ -635,5 +635,26 @@ function fakeBin(x) {
 function fakeBin(x){
   return x.replace(/[1234]/g, '0').replace(/[56789]/g, '1')
 }
+
+// QUESTION Exclusive "or" (xor) Logical Operator
+
+xor = (a, b) => {
+  if(a && !b || !a && b) {
+    return true
+  }
+  return false
+}
+
+// other answers
+
+function xor(a, b) {
+  return a != b;
+}
+
+function xor(a, b) {
+  return (a || b) && !(a && b);
+}
+
+const xor=(a, b)=>a!=b;
 
 // QUESTION 
