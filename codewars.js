@@ -528,4 +528,35 @@ function sumArray(array) {
     : 0
 }
 
+// QUESTION count the monkeys
+
+monkeyCount = (n) => {
+  var monkeys = []
+  for (var i = 0; i < n; i++) {
+         monkeys[i] = i + 1; 
+       }
+
+   return monkeys;
+}
+
+// other answers
+
+function monkeyCount(n) {
+ var monkeys = [];
+ for(var i=1; i<n+1; i++){
+   monkeys.push(i);
+ }
+ return monkeys;
+}
+
+function monkeyCount(n) {
+  for (var i = 0, arr = []; i < n; arr.push(++i));
+  
+  return arr;
+}
+
+function monkeyCount(n) {
+  return Array.from({length:n}, (_,i)=>i+1)
+}
+
 // QUESTION 
