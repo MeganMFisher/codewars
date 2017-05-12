@@ -657,4 +657,25 @@ function xor(a, b) {
 
 const xor=(a, b)=>a!=b;
 
-// QUESTION 
+// QUESTION welcome to the city
+
+sayHello = ( name, city, state ) => {
+if(name[2]) {
+  return 'Hello, ' + name[0] + ' ' + name[1] + ' ' + name[2] +'!' + ' Welcome to ' + city  + ', ' + state + '!' 
+} else {
+  return 'Hello, ' + name[0] + ' ' + name [1] + '!' + ' Welcome to ' + city  + ', ' + state + '!' 
+}
+}
+
+// other answers
+
+function sayHello( name, city, state ) {
+return `Hello, ${name.join(' ')}! Welcome to ${city}, ${state}!`
+}
+
+function sayHello( name, city, state ) {
+  return 'Hello, ' + name.join(' ') + '! Welcome to ' + city + ', ' + state + '!';
+}
+
+var sayHello = (n, c, s) => `Hello, ${n.join(' ')}! Welcome to ${c}, ${s}!`;
+
