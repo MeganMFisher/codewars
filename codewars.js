@@ -679,3 +679,22 @@ function sayHello( name, city, state ) {
 
 var sayHello = (n, c, s) => `Hello, ${n.join(' ')}! Welcome to ${c}, ${s}!`;
 
+// QUESTION is it even?
+
+testEven = (n) => n % 2 === 0
+
+// other answers 
+
+function testEven(n) {
+    return n%2===0;
+}
+
+function testEven(n){
+  return !(n % 2);
+}
+
+function testEven(n) {
+  return n % 2 === 0 ? true : false;
+}
+
+var testEven = x => !(x % 2)
