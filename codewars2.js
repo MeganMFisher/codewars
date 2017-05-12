@@ -411,6 +411,14 @@ noOdds = ( values ) => {
   return evens
 }
 
+BombKey
+diffuseTheBomb
+3.14..
+new Date()
+
+
+
+
 // other answers
 
 function no_odds( values ){
@@ -435,7 +443,32 @@ function solution(str){
 
 // QUESTION 
 
+duplicateCount = (string) => {
+ let arr = []
+  string.toLowerCase().split('').filter((e, i, array) => {
+    if(array.indexOf(e) !== i && arr.indexOf(e) === -1) arr.push(e)
+  })
+  return arr.length
+}
 
+// other answers 
+
+function duplicateCount(text){
+  return (text.toLowerCase().split('').sort().join('').match(/([^])\1+/g) || []).length;
+}
+
+
+function duplicateCount(text){
+  return text.toLowerCase().split('').filter(function(val, i, arr){
+    return arr.indexOf(val) !== i && arr.lastIndexOf(val) === i;
+  }).length;
+}
+
+function duplicateCount(text){
+  return new Set(text.toLowerCase().match(/(.)(?=.*\1)/gi)).size
+}
+
+// QUESTION 
 
 
 
