@@ -441,7 +441,7 @@ function solution(str){
   return str.length > 0 ? solution(str.substring(1)) + str.charAt(0) : '';
 }
 
-// QUESTION 
+// QUESTION counting duplicates
 
 duplicateCount = (string) => {
  let arr = []
@@ -468,7 +468,43 @@ function duplicateCount(text){
   return new Set(text.toLowerCase().match(/(.)(?=.*\1)/gi)).size
 }
 
+// QUESTION Hit Count
+
+function counterEffect(str) {
+  var splitStr = str.split('');
+  console.log(splitStr);
+  var newArr = [];
+  for (var i = 0; i < splitStr.length; i++) {
+    newArr.push([])
+    for(var j = 0; j <= splitStr[i]; j++) {
+      newArr[i].push(j);
+    }
+  }
+  return newArr;
+}
+
+// other answers 
+
+function counterEffect(hitCount) {
+  return [...hitCount].map( d => Array.from({length:+d+1}, (_,i) => i) )
+}
+
+function counterEffect(hitCount) {
+   return hitCount.split('').map(function(x){
+     return '0123456789'.substring(0, +x +1).split('').map(y => +y);
+   });
+}
+
+function counterEffect(count) {
+  let arr = [], i;
+  for (i = 0; i < count.length; i++)  
+    arr.push([...Array.from({length: +count[i] + 1}).keys()]);
+  return arr;
+}
+
 // QUESTION 
+
+
 
 
 
