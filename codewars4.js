@@ -34,4 +34,8 @@ function solution(input, markers){
   }).join('\n');
 }
 
-// QUESTION 
+// QUESTION One line task: count down 1
+
+countDown=n=>n+2+`!${n+1}!`+n
+
+// other answers 
