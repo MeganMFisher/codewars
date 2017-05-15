@@ -39,3 +39,40 @@ function solution(input, markers){
 countDown=n=>n+2+`!${n+1}!`+n
 
 // other answers 
+
+countDown=n=>2+n+`!${-~n}!`+n
+
+// QUESTION Human readable timetable 
+
+humanReadable = (sec) => {
+    let hours = timeFunc(Math.floor(sec / 3600)), 
+        minutes = timeFunc(Math.floor((sec % 3600) / 60)), 
+        seconds= timeFunc(sec - (hours * 3600)-(minutes * 60));
+    return `${hours}:${minutes}:${seconds}`
+}
+
+timeFunc = (time) => {
+  if(("" + time).length < 2){return '0' + time}
+  return time;
+}
+
+
+// other answers 
+
+function humanReadable(seconds) {
+  var pad = function(x) { return (x < 10) ? "0"+x : x; }
+  return pad(parseInt(seconds / (60*60))) + ":" +
+         pad(parseInt(seconds / 60 % 60)) + ":" +
+         pad(seconds % 60)
+}
+
+function humanReadable(seconds) {
+  return [seconds / 3600, seconds % 3600 / 60, seconds % 60].map(function(v) {
+    v = Math.floor(v).toString();
+    return v.length == 1 ? '0' + v : v;
+  }).join(':');
+}
+
+p=n=>`0${n}`.slice(-2),humanReadable=(s)=>(m=s/60|0,p(m/60|0)+':'+p(m%60)+':'+p(s%60))
+
+// QUESTION 
