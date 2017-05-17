@@ -502,10 +502,35 @@ function counterEffect(count) {
   return arr;
 }
 
-// QUESTION 
+// QUESTION Stop gninnipS My sdroW!
 
+spinWords = (str) => {
+  var sentence = str.split(' ')
+  var arr = []
+  sentence.map((e) => {
+    if(e.length >= 5) {
+      arr.push(e.split('').reverse().join(''))
+    } else {
+      arr.push(e)
+    }
+  })
+  return arr.toString().replace(/,/g, " ")
+}
 
+// other answers 
 
+function spinWords(words){
+  return words.split(' ').map(function (word) {
+    return (word.length > 4) ? word.split('').reverse().join('') : word;
+  }).join(' ');
+}
 
+function spinWords(string){
+  return string.replace(/\w{5,}/g, function(w) { return w.split('').reverse().join('') })
+}
+
+function spinWords(str){
+  return str.split(' ').map( w => w.length<5 ? w : w.split('').reverse().join('') ).join(' ');
+}
 
 
