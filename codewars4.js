@@ -75,4 +75,30 @@ function humanReadable(seconds) {
 
 p=n=>`0${n}`.slice(-2),humanReadable=(s)=>(m=s/60|0,p(m/60|0)+':'+p(m%60)+':'+p(s%60))
 
-// QUESTION 
+// QUESTION Convert PascalCase string into snake_case
+
+toUnderscore = (string) =>  {
+  if(string.length > 1) {
+    return string.replace(/([a-z0-9])([A-Z])/g, '$1_$2').toLowerCase(); 
+  } else {
+    return string.toString()
+  }
+}
+
+//other answers
+
+  var toUnderscore;
+
+  toUnderscore = function(string) {
+    return string.toString().split(/(?=[A-Z])/).join('_').toLowerCase();
+  };
+
+  function toUnderscore(string) {
+  return (''+string).replace(/(.)([A-Z])/g, '$1_$2').toLowerCase();
+}
+
+function toUnderscore(string) {
+  return (string+'').replace(/([^A-Z])([A-Z])/g, "$1_$2").toLowerCase();
+}
+
+//QUESTION 
