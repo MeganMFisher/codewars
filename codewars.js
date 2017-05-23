@@ -728,4 +728,14 @@ function getAverage(marks){
 
 const getAverage = marks => Math.floor(marks.reduce((a, b) => a + b) / marks.length);
 
-// QUESTION
+// QUESTION Grasshopper - Combine strings
+
+combineNames = (first, last) =>  first + ' ' + last
+
+// other answers
+
+const combineNames = (...names) => names.join(' ');
+
+const combineNames = (a, b) => `${a} ${b}`;
+
+// QUESTION 
