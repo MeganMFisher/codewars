@@ -820,4 +820,18 @@ function greet (name, owner) {
   return `Hello ${name==owner?'boss':'guest'}`
 }
 
-// QUESTION
+// QUESTION Find Multiples of a Number
+
+function findMultiples(int,limit){
+var nums = []
+  for(var i = int; i <= limit; i++) {
+  console.log(i)
+    if(i % int === 0) {
+      nums.push(i)
+  }
+}
+  return nums
+}
+
+
+// other answers
