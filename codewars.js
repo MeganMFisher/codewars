@@ -825,7 +825,6 @@ function greet (name, owner) {
 function findMultiples(int,limit){
 var nums = []
   for(var i = int; i <= limit; i++) {
-  console.log(i)
     if(i % int === 0) {
       nums.push(i)
   }
@@ -835,3 +834,17 @@ var nums = []
 
 
 // other answers
+
+function findMultiples(int,limit){
+  let result = []
+  
+  for (let i = int; i<=limit ; i+=int)
+    result.push(i)
+    
+  return result
+}
+
+const findMultiples=(n,l)=>Array.from({length:~~(l/n)},(a,i)=>i*n+n);
+
+// QUESTION 
+
