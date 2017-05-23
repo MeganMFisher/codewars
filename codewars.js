@@ -738,4 +738,31 @@ const combineNames = (...names) => names.join(' ');
 
 const combineNames = (a, b) => `${a} ${b}`;
 
-// QUESTION 
+// QUESTION How good are you really?
+
+betterThanAverage = (classPoints, yourPoints) => {
+ let avg = 0
+ let finalAvg = 0
+ classPoints.map((e) => {
+   avg += e
+ })
+ finalAvg = avg / classPoints.length
+ if(finalAvg >= yourPoints) {
+   return false
+ } else {
+   return true
+ }
+}
+
+
+// other answers
+
+function betterThanAverage(classPoints, yourPoints) {
+  return yourPoints > classPoints.reduce((a, b) => a + b, 0) / classPoints.length; 
+}
+
+function betterThanAverage(classPoints, yourPoints) {
+  return classPoints.reduce((sum, x) => sum + x) < yourPoints * classPoints.length;
+}
+
+//QUESTION
