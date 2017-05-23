@@ -699,8 +699,33 @@ function testEven(n) {
 
 var testEven = x => !(x % 2)
 
-//QUESTION 
+//QUESTION Convert a Boolean to a String
+
 
 booleanToString = (b) => b.toString()
 
 // other answers
+
+function booleanToString(b){
+  return b ? 'true' : 'false';
+}
+
+// QUESTION Get the mean of an array
+
+function getAverage(marks){
+let nums = 0
+  marks.map((e) => {
+    nums += e
+  })
+  return Math.floor(nums / marks.length)
+}
+
+// other answers
+
+function getAverage(marks){
+  return Math.floor(marks.reduce((sum, x) => sum + x) / marks.length);
+}
+
+const getAverage = marks => Math.floor(marks.reduce((a, b) => a + b) / marks.length);
+
+// QUESTION
