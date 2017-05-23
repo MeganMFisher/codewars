@@ -766,3 +766,27 @@ function betterThanAverage(classPoints, yourPoints) {
 }
 
 //QUESTION
+
+var repeatIt = function(str, n) {
+if(typeof str === 'string') {
+    return str.repeat(n)
+    } 
+    return 'Not a string'
+  }
+
+  // other answers
+
+var repeatIt = function(str, n) {
+  return typeof str === 'string' ? Array(n+1).join(str) : 'Not a string';
+}
+
+  //QUESTION Grasshopper - Array Mean
+
+  var findAverage = function (nums) {
+  let mean = 0
+  nums.map((e) => {
+    mean += e
+  })
+  return mean / nums.length
+}
+
