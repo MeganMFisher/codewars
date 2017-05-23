@@ -101,4 +101,54 @@ function toUnderscore(string) {
   return (string+'').replace(/([^A-Z])([A-Z])/g, "$1_$2").toLowerCase();
 }
 
-//QUESTION 
+//QUESTION Pete, the Baker
+
+cakes = (recipe, available) => {
+  var recipes = [];
+  var numbers = [];
+  for(var x in recipe){
+  	recipes.push(x);
+  }
+  for(let i = 0; i < recipes.length; i++){
+  	if(!available.hasOwnProperty(recipes[i])){
+  		return 0;
+  	}
+  }
+  for(var y in recipe){
+  	numbers.push(Math.floor(available[y] / recipe[y]));
+  }
+  numbers.sort(function(a, b){return a-b});
+  return numbers[0];
+}
+
+// other answers
+
+function cakes(recipe, available) {
+  return Object.keys(recipe).reduce(function(val, ingredient) {
+    return Math.min(Math.floor(available[ingredient] / recipe[ingredient] || 0), val)
+  }, Infinity)  
+}
+
+function cakes(recipe, initial){
+   return Math.floor(Object.keys(recipe).reduce(function(min, key){
+      return Math.min(initial[key] / recipe[key] || 0, min);
+   }, Infinity));
+}
+
+function cakes(recipe, available) {
+  var numCakes = [];
+  
+  for(var key in recipe){
+    if(recipe.hasOwnProperty(key)){
+      if(key in available){
+        numCakes.push(Math.floor(available[key] / recipe[key]));
+      }else{
+        return 0;
+      }
+    }
+  }
+  
+  return Math.min.apply(null, numCakes); 
+  
+}
+

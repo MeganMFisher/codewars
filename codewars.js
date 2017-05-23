@@ -698,3 +698,9 @@ function testEven(n) {
 }
 
 var testEven = x => !(x % 2)
+
+//QUESTION 
+
+booleanToString = (b) => b.toString()
+
+// other answers
