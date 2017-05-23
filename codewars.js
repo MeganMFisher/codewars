@@ -800,4 +800,24 @@ function lowercaseCount(str){
     return (str.match(/[a-z]/g) || []).length
 }
 
+// QUESTION Grasshopper - Personalized Message
+
+function greet (name, owner) {
+ if(name === owner) {
+   return 'Hello boss'
+   } else {
+     return 'Hello guest'
+   }
+}
+
+// other answers
+
+function greet (name, owner) {
+  return name === owner ? 'Hello boss' :   'Hello guest';
+}
+
+function greet (name, owner) {
+  return `Hello ${name==owner?'boss':'guest'}`
+}
+
 // QUESTION
