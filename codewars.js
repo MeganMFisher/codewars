@@ -765,7 +765,7 @@ function betterThanAverage(classPoints, yourPoints) {
   return classPoints.reduce((sum, x) => sum + x) < yourPoints * classPoints.length;
 }
 
-//QUESTION
+//QUESTION repeatIt
 
 var repeatIt = function(str, n) {
 if(typeof str === 'string') {
@@ -790,3 +790,14 @@ var repeatIt = function(str, n) {
   return mean / nums.length
 }
 
+// QUESTION Regex count lowercase letters
+
+lowercaseCount = (str)=> str.length - str.replace(/[a-z]/g, '').length
+
+// other answers
+
+function lowercaseCount(str){
+    return (str.match(/[a-z]/g) || []).length
+}
+
+// QUESTION
