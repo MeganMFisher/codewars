@@ -887,4 +887,24 @@ function addLength(str){
   return str.split(" ").map(s => `${s} ${s.length}`)
 }
 
-//QUESTION
+//QUESTION Exclamation marks series #2: Remove all exclamation marks from the end of sentence
+
+remove = (s) => s.replace(/!+$/, '') 
+
+// QUESTION No zeros for heros
+
+noBoringZeros = (n) => {
+let m = n.toString()
+  return Number(m.replace(/0+$/, ''))
+}
+
+// other answers
+
+function noBoringZeros(n) {
+  while(n%10==0 && n!=0){n/=10;}
+  return n;
+}
+
+const noBoringZeros = n => parseInt(n.toString().replace(/0+$/g, "") + 0) / 10;
+
+// QUESTION 
