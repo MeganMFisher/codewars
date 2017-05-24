@@ -846,5 +846,23 @@ function findMultiples(int,limit){
 
 const findMultiples=(n,l)=>Array.from({length:~~(l/n)},(a,i)=>i*n+n);
 
-// QUESTION 
+// QUESTION Printing Array elements with Comma delimiters
 
+printArray = (array) => array.join(',')
+
+
+// QUESTION Pre-FizzBuzz Workout #1
+
+preFizz = (n) => {
+  var array = [];
+  for(var i = 0; i < n; i++){
+   array.push(i + 1);
+  }
+  return array
+}
+
+// other answers
+
+let preFizz = n => [...Array(n)].map((x, i) => i+1);
+
+//QUESTION 
