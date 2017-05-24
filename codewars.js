@@ -933,4 +933,42 @@ function correct(string) {
                  .replace(/1/g, "I");
 }
 
-// QUESTION
+// QUESTION Complementary DNA
+
+DNAStrand = (dna) => {
+  let dnaSplit = dna.split('')
+ for(let i = 0; i < dnaSplit.length; i++){
+    if(dnaSplit[i] === 'A') {
+       (dnaSplit[i] = 'T');
+     } else if(dnaSplit[i] === 'C') {
+       (dnaSplit[i] ='G') 
+     } else if(dnaSplit[i] === 'G') {
+       (dnaSplit[i] = 'C') 
+     } else if(dnaSplit[i] === 'T') {
+       (dnaSplit[i] = 'A')
+     }
+  }
+return dnaSplit.join('')
+}
+
+
+// other answers
+
+function DNAStrand(dna) {
+  return dna.replace(/./g, function(c) {
+    return DNAStrand.pairs[c]
+  })
+}
+
+DNAStrand.pairs = {
+  A: 'T',
+  T: 'A',
+  C: 'G',
+  G: 'C',
+}
+
+function DNAStrand(dna) {
+  return dna.split('').map(function(v) {return {A:'T', T:'A', C:'G', G:'C'}[v];}).join('');
+}
+
+// QUESTION 
