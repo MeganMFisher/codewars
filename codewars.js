@@ -907,4 +907,30 @@ function noBoringZeros(n) {
 
 const noBoringZeros = n => parseInt(n.toString().replace(/0+$/g, "") + 0) / 10;
 
-// QUESTION 
+// QUESTION Correct the mistakes of the character recognition software
+
+correct = (str) => {
+  let strSplit = str.split('')
+  for(var i = 0; i < strSplit.length; i++) {
+    if(strSplit[i] === '0') {
+        strSplit[i] = 'O';
+      } else if(strSplit[i] === '5') {
+      strSplit[i] = 'S';
+      } else if(strSplit[i] === '1') {
+      strSplit[i] = 'I';
+      }
+}
+  return strSplit.join('')
+}
+
+// other answers
+
+correct = s => s.replace(/0/g,'O').replace(/1/g,'I').replace(/5/g,'S')
+
+function correct(string) {
+    return string.replace(/0/g, "O")
+                 .replace(/5/g, "S")
+                 .replace(/1/g, "I");
+}
+
+// QUESTION
