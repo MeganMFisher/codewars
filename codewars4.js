@@ -182,3 +182,11 @@ function generateHashtag(str) {
   return hashed.length > 140 || str == "" ? false : hashed;
 }
 
+// QUESTION Regex Password Validation
+
+validate = (password) => {
+  return /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])[A-Za-z0-9]{6,}$/.test(password);
+}
+
+// other answers
+
