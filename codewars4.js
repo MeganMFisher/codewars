@@ -152,3 +152,33 @@ function cakes(recipe, available) {
   
 }
 
+// QUESTION The Hashtag Generator
+
+function generateHashtag (str) {
+  if(!str || str.length > 140) {
+    return false
+  } else {
+    let uppStr = str.toLowerCase().replace(/(^| )(\w)/g, s => s.toUpperCase())
+    let splitStr = uppStr.split('')
+    splitStr.unshift('#')
+    return splitStr.join('').trim().replace(/\s+/g, '')
+    }
+}
+
+//other solutions
+
+function generateHashtag (str) {
+  return str.length > 140 || str === '' ? false :
+    '#' + str.split(' ').map(capitalize).join('');
+}
+
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+
+function generateHashtag(str) {
+  var hashed = '#' + str.split(' ').map(function(v) {return v.charAt(0).toUpperCase() + v.slice(1);}).join('');
+  return hashed.length > 140 || str == "" ? false : hashed;
+}
+
