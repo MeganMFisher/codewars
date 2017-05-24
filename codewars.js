@@ -865,4 +865,26 @@ preFizz = (n) => {
 
 let preFizz = n => [...Array(n)].map((x, i) => i+1);
 
-//QUESTION 
+//QUESTION Add Length
+
+addLength = (str) => {
+ let result = []
+ let strSplit = str.split(' ')
+ for(let i = 0; i < strSplit.length; i++) {
+   result.push(strSplit[i] + ' ' + strSplit[i].length)
+   }
+ return result
+ 
+}
+
+// other answers
+
+function addLength(str){
+  return str.split(' ').map(function(v){return v+' '+v.length})
+}
+
+function addLength(str){
+  return str.split(" ").map(s => `${s} ${s.length}`)
+}
+
+//QUESTION
