@@ -971,4 +971,22 @@ function DNAStrand(dna) {
   return dna.split('').map(function(v) {return {A:'T', T:'A', C:'G', G:'C'}[v];}).join('');
 }
 
+// QUESTION Grasshopper - If/else syntax debug
+
+function checkAlive (health) {
+  if (health > 0) {
+    return true
+  } else {
+    return false
+  }
+}
+
+// other answers
+
+function checkAlive(health) {
+  return health > 0;
+}
+
+const checkAlive = (health) => health > 0
+
 // QUESTION 
