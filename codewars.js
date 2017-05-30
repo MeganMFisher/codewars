@@ -1005,3 +1005,9 @@ function findLongest(str) {
 }
 
 // other answers
+
+const findLongest = s => Math.max(...s.split(" ").map(x => x.length));
+
+const findLongest = input => Math.max(...input.split(" ").map(i => i.length));
+
+// QUESTION 
