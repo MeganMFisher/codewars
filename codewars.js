@@ -1023,3 +1023,16 @@ function generateMenu(menuItems) {
 
 
 //other answers
+
+function generateMenu (menuItems) {
+  return menuItems.map(function(e) {
+    return '<a href=\"' + e.url + '\">' + e.text + '</a>';
+  }).join('')
+}
+
+let generateMenu = arr => arr.reduce((c, v) => c += `<a href="${v.url}">${v.text}</a>`, '');
+
+const generateMenu = menuItems =>
+  menuItems.map(({url, text}) => `<a href="${ url }">${ text }</a>`).join('');
+
+  //QUESTION 
