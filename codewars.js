@@ -1010,4 +1010,16 @@ const findLongest = s => Math.max(...s.split(" ").map(x => x.length));
 
 const findLongest = input => Math.max(...input.split(" ").map(i => i.length));
 
-// QUESTION 
+// QUESTION Generate HTML links
+
+function generateMenu(menuItems) {
+    var output = "";
+  for (var i = 0; i < menuItems.length; i++){
+    var anchor = "<a href=\"" + menuItems[i].url + "\">" + menuItems[i].text + "</a>";
+    output += anchor;
+  }
+  return output;
+}
+
+
+//other answers
