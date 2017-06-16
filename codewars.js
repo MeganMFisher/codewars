@@ -1035,4 +1035,48 @@ let generateMenu = arr => arr.reduce((c, v) => c += `<a href="${v.url}">${v.text
 const generateMenu = menuItems =>
   menuItems.map(({url, text}) => `<a href="${ url }">${ text }</a>`).join('');
 
-  //QUESTION 
+  //QUESTION Well of Ideas - Easy Version
+
+  function well(x){
+  var good = 0;
+  var bad = 0;
+  for(var i = 0; i < x.length; i++) {
+    if(x[i] === 'good') {
+      good++
+    } else {
+      bad++
+      }
+  }
+  if(good === 1 || good === 2) {
+    return 'Publish!'
+  } else if( good > 2 ) {
+    return 'I smell a series!'
+  } else if( good === 0) {
+    return 'Fail!'
+  }
+}
+
+// other answers 
+
+const well = x => {
+  const good_count = x.filter(x => x == 'good').length;
+  return good_count < 1 ? 'Fail!' : 
+         good_count < 3 ? 'Publish!' : 'I smell a series!';
+}
+
+function well(x) {
+  const count = x.reduce((s, v) => s + (v == 'good'), 0);
+  return count ? count > 2 ? 'I smell a series!' : 'Publish!' : 'Fail!';
+}
+
+const well = x => {
+let ideas = x.filter(y=>y==='good').length
+  switch (true) {
+    case ideas == 0: return 'Fail!'; break;
+    case ideas < 3: return 'Publish!'; break;
+    case ideas > 2: return 'I smell a series!'
+  }
+
+}
+
+// QUESTION 
