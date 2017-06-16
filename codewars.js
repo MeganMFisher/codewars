@@ -1334,4 +1334,21 @@ function removeSmallest(numbers) {
   return [...numbers.slice(0, indexOfMin), ...numbers.slice(indexOfMin + 1)];
 }
 
-//  QUESTION 
+function removeSmallest(numbers) {
+  numbers.splice(numbers.indexOf(Math.min(...numbers)), 1);
+  return numbers;
+}
+
+//  QUESTION Sort the Gift Code
+
+sortGiftCode = (code) => code.split('').sort().join('')
+
+// other answers
+
+const sortGiftCode = code => code.split('').sort().join('');
+
+function sortGiftCode(code){
+  return code.substring(0,26).split('').sort().join('');
+}
+
+// QUESTION 
