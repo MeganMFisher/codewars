@@ -1241,4 +1241,30 @@ function abbrevName(name){
   return name.split(' ').map(x => x.substr(0, 1).toUpperCase()).join('.');
 }
 
-// QUESTION 
+// QUESTION Find the smallest integer in the array
+
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+    var result = args.sort(function(a, b) {
+      return a - b
+    })
+    return result[0]
+  }
+}
+
+// other answers
+
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+    return Math.min(...args)
+  }
+}
+
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+    return Math.min.apply(Math, args)
+  }
+}
+
+//  QUESTION 
+
