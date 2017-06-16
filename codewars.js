@@ -1219,4 +1219,26 @@ const differenceInAges = (ages) => {
   return [youngest, oldest, oldest - youngest];
 };
 
-// QUESTION
+// QUESTION Abbreviate a Two Word Name
+
+function abbrevName(name){
+  var arr = name.toUpperCase().split(' ')
+  var names = []
+  names.push(arr[0][0])
+  names.push(arr[1][0])
+  return names.join('.')
+}
+
+// other answers 
+
+function abbrevName(name){
+
+  var nameArray = name.split(" ");
+  return (nameArray[0][0] + "." + nameArray[1][0]).toUpperCase();
+}
+
+function abbrevName(name){
+  return name.split(' ').map(x => x.substr(0, 1).toUpperCase()).join('.');
+}
+
+// QUESTION 
