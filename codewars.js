@@ -1394,4 +1394,44 @@ function solution(nums){
     return nums !== null ? nums.sort(function(a,b){return a-b}) : [];
 }
 
-// QUESTION 
+// QUESTION Sort arrays - 1
+
+sortme = function( names ){
+  return names.sort()
+}
+
+// other answers 
+
+sortme = Array.sort;
+
+sortme = a => a.sort();
+
+
+// QUESTION Find the capitals
+
+var capitals = function (word) {
+var arr = []
+	for(let i = 0; i < word.length; i++) {
+    if(word[i] === word[i].toUpperCase()){
+      arr.push(i)
+    }
+  }
+  
+  return arr
+};
+
+// other answers 
+
+var capitals = function (word) {
+  return word.split('').reduce(function(memo, v, i) {
+    return v === v.toUpperCase() ? memo.concat(i) : memo;
+  }, []);
+};
+
+var capitals = function (word) {
+  for (var pos = [], i = 0, len = word.length; i < len;/[A-Z]/.test(word[i++]) ? pos.push(i-1) : null);
+  return pos;
+};
+
+// QUESTION
+
