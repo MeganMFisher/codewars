@@ -1187,4 +1187,36 @@ function aliasGen(a, b) {
   return /^[a-z]/i.test(a) && /^[a-z]/i.test(b) ? `${firstName[a[0].toUpperCase()]} ${surname[b[0].toUpperCase()]}` : "Your name must start with a letter from A - Z.";  
 }
 
-// QUESTION 
+// QUESTION Find the Difference in Age between Oldest and Youngest Family Members
+
+function differenceInAges(ages){
+  var sorted = ages.sort(function(a, b) {
+    return a - b;
+  })
+  var results = []
+  var last = sorted.pop()
+  var total = last - sorted[0]
+  results.push(sorted[0])
+  results.push(last)
+  results.push(total)
+  return results
+}
+
+// other answers 
+
+function differenceInAges (ages) {
+
+    let max = Math.max(...ages),
+        min = Math.min(...ages)
+        diff = max - min
+        
+    return [min, max, diff]
+}
+
+const differenceInAges = (ages) => {
+  let youngest = Math.min.apply(null, ages);
+  let oldest = Math.max.apply(null, ages);
+  return [youngest, oldest, oldest - youngest];
+};
+
+// QUESTION
