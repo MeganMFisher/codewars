@@ -1079,4 +1079,11 @@ let ideas = x.filter(y=>y==='good').length
 
 }
 
-// QUESTION 
+// QUESTION Word count
+
+countWords = (str) => {
+  var word = str.match(/[a-zA-Z0-9\-'`]+/g);
+  return (str == '' || !word) ? 0 : word.length;
+}
+
+// other answers
