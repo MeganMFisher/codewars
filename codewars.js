@@ -1433,5 +1433,21 @@ var capitals = function (word) {
   return pos;
 };
 
-// QUESTION
+// QUESTION Friend or Foe?
 
+friend = (friends) => {
+  var list = friends.filter((e) => {
+     return e.length === 4
+  })
+  return list
+}
+
+// other answers 
+
+function friend(friends){
+  return friends.filter(n => n.length === 4)
+}
+
+const friend = friends => friends.filter(friend => friend.length == 4);
+
+// QUESTION 
