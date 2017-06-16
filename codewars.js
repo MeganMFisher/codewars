@@ -1266,5 +1266,72 @@ class SmallestIntegerFinder {
   }
 }
 
-//  QUESTION 
+//  QUESTION Sum of two lowest positive integers
 
+sumTwoSmallestNumbers = (numbers) => {  
+  var sorted = numbers.sort(function(a, b) {
+      return a - b
+    })
+    return sorted[0] + sorted[1]
+};
+
+// other answers 
+
+function sumTwoSmallestNumbers(numbers){  
+  numbers = numbers.sort(function(a, b){return a - b; });
+  return numbers[0] + numbers[1];
+};
+
+// QUESTION Building Strings From a Hash
+
+solution = (pairs) => {
+return Object.keys(pairs)
+    .map(function(e) { return e + ' = ' + pairs[e] })
+    .join(',');
+}
+
+// other answers 
+
+function solution(pairs){
+  var array = [];
+  for (var pair in pairs){
+    array.push((pair+' = '+pairs[pair]));
+  }
+  return array.join(',');
+}
+
+function solution(pairs) {
+  return Object.keys(pairs).map(k => `${k} = ${pairs[k]}`).join(",");
+}
+
+// QUESTION Remove the minimum
+
+function removeSmallest(numbers) {
+  if(numbers.length < 1) {
+    return []
+  } else {
+    var min = Math.min(...numbers);
+    for(var i = 0; i < numbers.length; i++) {
+      if(numbers[i] === min) {
+        numbers.splice(i ,1)
+        return numbers
+      }
+    }
+  }
+}
+
+// other answers 
+
+function removeSmallest(numbers) {
+  if(!numbers)return [];
+  var min=Math.min.apply(null,numbers);
+  numbers.splice(numbers.indexOf(min),1);
+  return numbers;
+}
+
+function removeSmallest(numbers) {
+  let indexOfMin = numbers.indexOf(Math.min(...numbers));
+  return [...numbers.slice(0, indexOfMin), ...numbers.slice(indexOfMin + 1)];
+}
+
+//  QUESTION 
