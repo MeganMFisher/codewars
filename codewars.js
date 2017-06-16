@@ -1450,4 +1450,22 @@ function friend(friends){
 
 const friend = friends => friends.filter(friend => friend.length == 4);
 
+// QUESTION JavaScript Array Filter
+
+getEvenNumbers = (numbersArray) => {
+   return numbersArray.filter(n => n % 2 === 0)
+}
+
+// other answers 
+
+function getEvenNumbers(numbersArray){
+  return numbersArray.filter(function(num){return !(num % 2) })  
+}
+
+function getEvenNumbers(numbersArray){
+  return numbersArray.filter(function(x) {
+      return x % 2 == 0;
+  })
+} 
+
 // QUESTION 
