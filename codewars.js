@@ -1351,4 +1351,23 @@ function sortGiftCode(code){
   return code.substring(0,26).split('').sort().join('');
 }
 
+// QUESTION The highest profit wins!
+
+minMax = (arr) => {
+let final = []
+  final.push(Math.min( ...arr ))
+  final.push(Math.max( ...arr ))
+return final  
+}
+
+// other answers 
+
+function minMax(arr){
+  return [Math.min(...arr), Math.max(...arr)];
+}
+
+function minMax(arr){
+  return [Math.min.apply(Math, arr), Math.max.apply(Math, arr)];
+}
+
 // QUESTION 
