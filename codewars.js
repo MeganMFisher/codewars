@@ -1087,3 +1087,42 @@ countWords = (str) => {
 }
 
 // other answers
+
+function countWords(str) {
+  return (str.match(/[^\s]+/g) || []).length;
+}
+
+function countWords(str) {
+ return str.split(/\s/).filter(el => {
+    return el;
+  }).length; 
+}
+
+// QUESTION Lexical This
+
+var Person = function(){
+  var person = {
+    _name: "Leroy",
+    _friends: [],
+    fillFriends(f) { 
+       person._friends = f
+    }
+  }
+  return person;
+}
+
+// other answer
+
+var Person = function(){
+  var person = {
+    _name: "Leroy",
+    _friends: [],
+    fillFriends(f){
+      this._friends.push(...f);
+    }
+  }
+  return person;
+}
+
+// QUESTION
+
