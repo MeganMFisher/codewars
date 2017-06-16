@@ -1157,4 +1157,34 @@ function findStrangeValue() {
 
 const findStrangeValue = () => NaN;
 
+// QUESTION Crash Override
+
+
+function aliasGen(first, last){
+   var firstArr = first.split('')[0].toUpperCase()
+   var lastArr = last.split('')[0].toUpperCase()
+   var fullName = []
+   if(!Number(firstArr) && !Number(lastArr)) {
+       fullName.push(firstName[firstArr]) 
+       fullName.push(surname[lastArr])
+   } else {
+       fullName.push('Your name must start with a letter from A - Z.')
+   }
+  return fullName.join(' ')
+}
+
+// other answers 
+
+const initialCap = (str) => str[0].toUpperCase();
+const isValidName = (name) => /^[a-z]/i.test(name);
+const aliasGen = (fName, lName) => {
+  return (isValidName(fName) && isValidName(lName))
+    ? `${ firstName[initialCap(fName)] } ${ surname[initialCap(lName)] }`
+    : 'Your name must start with a letter from A - Z.';
+}
+
+function aliasGen(a, b) {
+  return /^[a-z]/i.test(a) && /^[a-z]/i.test(b) ? `${firstName[a[0].toUpperCase()]} ${surname[b[0].toUpperCase()]}` : "Your name must start with a letter from A - Z.";  
+}
+
 // QUESTION 
