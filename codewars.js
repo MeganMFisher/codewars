@@ -1370,4 +1370,28 @@ function minMax(arr){
   return [Math.min.apply(Math, arr), Math.max.apply(Math, arr)];
 }
 
+// QUESTION Sort Numbers
+
+solution = (nums) => {
+  if(nums == null)  {
+    return []
+  } else {
+    return nums.sort((a,b) => {
+      return a - b
+    })
+  }
+}
+
+// other answers 
+
+function solution(nums){
+  return (nums || []).sort(function(a, b){
+    return a - b
+  });
+}
+
+function solution(nums){
+    return nums !== null ? nums.sort(function(a,b){return a-b}) : [];
+}
+
 // QUESTION 
