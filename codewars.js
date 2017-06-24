@@ -1468,4 +1468,34 @@ function getEvenNumbers(numbersArray){
   })
 } 
 
+// QUESTION Sort Numbers
+
+function solution(nums){
+  var arr = []
+  if(nums == null || nums == []) {
+    return arr
+  } else {
+    return nums.sort(function(a, b) {
+      return a - b
+    })
+  }
+
+}
+
+// other answers 
+
+function solution(nums){
+  return (nums || []).sort(function(a, b){
+    return a - b
+  });
+}
+
+function solution(nums){
+    return nums !== null ? nums.sort(function(a,b){return a-b}) : [];
+}
+
+function solution(nums){
+  return nums ? nums.sort(function(a, b) { return a - b;}) : [];
+}
+
 // QUESTION 
