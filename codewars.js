@@ -1499,3 +1499,33 @@ function solution(nums){
 }
 
 // QUESTION 
+
+var greet = function(name) {
+var arr = ['Hello ']
+var name = name.toLowerCase()
+var cap = name[0].toUpperCase() + name.slice(1);
+arr.push(cap)
+arr.push('!')
+return arr.join('')
+
+};
+
+// other answers 
+
+var greet = function(name) {
+  return "Hello " + name.charAt(0).toUpperCase() + name.slice(1).toLowerCase() + "!";
+};
+
+var greet = function(name) {
+  return 'Hello ' + name[0].toUpperCase() + name.slice(1).toLowerCase() + '!';
+};
+
+var greet = function(name) {
+name = name.toLowerCase();
+name= name.split('');
+name[0] = name[0].toUpperCase();
+name = name.join('');
+return "Hello " + name +"!";
+};
+
+// QUESTION 
