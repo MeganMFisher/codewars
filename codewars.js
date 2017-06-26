@@ -1498,7 +1498,7 @@ function solution(nums){
   return nums ? nums.sort(function(a, b) { return a - b;}) : [];
 }
 
-// QUESTION 
+// QUESTION Greet Me
 
 var greet = function(name) {
 var arr = ['Hello ']
