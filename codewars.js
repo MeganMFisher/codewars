@@ -1528,4 +1528,18 @@ name = name.join('');
 return "Hello " + name +"!";
 };
 
-// QUESTION 
+// QUESTION Palindrome
+
+var isPalindrome = function(word) {
+if(word) {
+    var forwards = word.toLowerCase()
+    var backwards = word.toLowerCase()
+    backwards = backwards.split('').reverse().join('')
+  
+  return (forwards === backwards ) ? true: false;
+  
+  } 
+  return false
+};  
+
+// QUESTION
